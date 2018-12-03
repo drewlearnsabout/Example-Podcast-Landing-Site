@@ -1,9 +1,6 @@
 body {
+    width: 100%;
     margin: 0 auto;
-}
-
-main {
-
 }
 
 header {
@@ -13,7 +10,110 @@ header {
     background-size: cover;
 }
 
+#headerBlock {
+    padding-top: 11em;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+#headerBlock h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    width: 100%;
+    font-size: 3em;
+    z-index: 1;
+    padding: 1.2em;
+    padding-left: 3.5em;
+    background: rgba(0, 0, 0, 0.4);
+    animation-name: swipeRight;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
 .socialIconSize {
-    height: 1em;
-    width: 1em;
+    height: 2em;
+    width: 2em;
+}
+.socialIconSize:hover {
+    animation-name: resize;
+    animation-duration: 1s;
+}
+
+nav {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.navbar {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar:hover {
+    animation-name: resize;
+    font-weight: bold;
+    animation-duration: 1s;
+    color: rgb(255, 81, 0);
+}
+
+#aboutSection {
+    margin: 0 auto;
+    background: url("adult-adventure-backpack-442559.jpg");
+    background-size: cover;
+    opacity: 0.9;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 3em 12em;
+    justify-items: center;
+    color: black;
+    text-shadow: 2px 2px 2px gray;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#aboutSection h2 {
+    padding-top: 1em;
+}
+
+#aboutSection p {
+    font-weight: bold;
+    padding: 1em;
+    margin: 5em;
+}
+
+@keyframes swipeRight {
+    0% {
+        width: 20%;
+        background: rgba(0, 0, 0, 0);
+    }
+    50% {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+}
+
+@keyframes resize {
+    0% {
+        transform: scale(1);
+    }
+    15% {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 600px) {
+    #headerBlock h1 {
+        font-size: 1.5em;
+    }
+
+    nav {
+        justify-items: left;
+    }
 }
