@@ -22,8 +22,8 @@
         </header>
             <nav id="stickyNavbar">
                 <a class="navbar" id="aboutButton" href="#aboutSection">About</a>
-                <a class="navbar" href="#podcasts">Latest Episodes</a>
-                <a class="navbar" href="#">Contact</a>
+                <a class="navbar" href="#firstPodcast">Latest Episodes</a>
+                <a class="navbar" id="contactButton" href="#contactSection">Contact</a>
             </nav>
         <div id="myModal" class="modal">
             <section id="aboutSection">
@@ -34,9 +34,21 @@
         </div>
 
             <!-- Create a section for the contact modal!  -->
-
-
-
+        <div id="myModal2" class="modal">
+            <section id="contactSection">
+                <form id="contact_me" name="contact" method="post" netlify>    
+                    <p>Contact me
+                        <br >veryimportantperson@gmail.com
+                    </p>
+                    <input class="contact_me_class" id="name" type="text" placeholder="Name" required>
+                    <input class="contact_me_class" id="email" type="email" placeholder="Email" required>
+                    <input class="contact_me_class" id="addition" type="number" placeholder="What's 1 + 2?" required>
+                    <textarea class="contact_me_class" id="comments" placeholder="Add comments or inquiries" rows="2" cols="19"></textarea>
+                    <button class="contact_me_class" id="submit" type="submit">Submit</button> 
+                </form>
+                <span class="close">&times;</span>
+            </section>
+        </div>
 
         <h3>Episodes</h3>
         <section id="podcasts">
@@ -86,6 +98,11 @@
         var aboutBtn = document.getElementById("aboutButton");
         var spanAbout = document.getElementsByClassName("close")[0];
 
+        //Variables for contact btn and section
+        var modal2 = document.getElementById("myModal2");
+        var contactBtn = document.getElementById("contactButton");
+        var spanContact = document.getElementsByClassName("close")[1];
+
         //JS for about section
         aboutBtn.onclick = function() {
             modal.style.display = "block";
@@ -93,11 +110,25 @@
         spanAbout.onclick = function() {
             modal.style.display = "none";
         }
+
+        //JS for contact section
+        contactBtn.onclick = function() {
+            modal2.style.display = "block";
+        }
+        spanContact.onclick = function() {
+            modal2.style.display = "none";
+        }
+
+        //JS for both About and Contact
         window.onclick = function() {
             if(event.target == modal) {
                 modal.style.display = "none";
             }
+            if(event.target == modal2) {
+                modal.style.display = "none";
+            }
         }
+
         //JS for sticky navbar
         window.scroll = function() {myFunction()};
         var navbar = document.getElementById("stickyNavbar");

@@ -97,6 +97,44 @@ nav {
     overflow: hidden;
 }
 
+#myModal2 {
+    width: 100%;
+}
+
+#contactSection {
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    justify-items: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Montserrat', sans-serif;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#contact_me {
+    display: grid;
+    grid-row-gap: 0.2em;
+}
+
+#contact_me_class {
+    display: grid;
+}
+
+#contact_me p {
+    text-align: center;
+}
+
+form button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
 h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8em;
