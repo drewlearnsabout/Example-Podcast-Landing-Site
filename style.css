@@ -25,11 +25,15 @@ header {
     color: white;
     font-size: 3em;
     z-index: 0;
-    width: 100%;
     background: rgba(0, 0, 0, 0.4);
     animation-name: swipeRight;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
+}
+
+#socialIcons {
+    animation-name: delay;
+    animation-duration: 2.5s;
 }
 
 .socialIconSize {
@@ -212,12 +216,26 @@ to hide and display the about content */
 
 @keyframes swipeRight {
     0% {
-        width: 20%;
-        background: rgba(0, 0, 0, 0);
+        width: 0%;
+        top: 0;
+        left: -150;
+        opacity: 0.0;
+        font-size: 0.5em;
     }
     50% {
-        width: 100%;
+        width: 70%;
         background: rgba(0, 0, 0, 0.4);
+        opacity: 0.5;
+    }
+    75% {
+        width: 40%;
+        font-size: 0.7em;
+    }
+    100% {
+        width: 100%;
+        left: 0;
+        opacity: 1;
+        font-size: 2em;
     }
 }
 
@@ -235,6 +253,18 @@ to hide and display the about content */
         opacity: 0.2;
     }
     15% {
+        opacity: 1;
+    }
+}
+
+@keyframes delay {
+    0% {
+        opacity: 0.0;
+    }
+    70% {
+        opacity: 0.0;
+    }
+    100% {
         opacity: 1;
     }
 }
