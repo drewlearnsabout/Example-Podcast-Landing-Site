@@ -27,13 +27,13 @@ header {
     z-index: 0;
     background: rgba(0, 0, 0, 0.4);
     animation-name: swipeRight;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
 #socialIcons {
-    animation-name: delay;
-    animation-duration: 2.5s;
+    animation-name: delay, bounceIcons;
+    animation-duration: 1.8s;
 }
 
 .socialIconSize {
@@ -47,18 +47,21 @@ header {
 
 nav {
     display: grid;
+    position: relative;
     justify-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
     padding: 1em;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgb(167, 167, 167);
     border-top: 1px solid white;
     border-bottom: 1px solid white;
+    z-index: 1;
 }
 
 .navbar {
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 
 .navbar:hover {
@@ -72,6 +75,10 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+.sticky + header {
+    padding-top: 60px;
 }
 
 #aboutSection {
@@ -123,11 +130,15 @@ nav {
 
 #contact_me {
     display: grid;
-    grid-row-gap: 0.2em;
+    grid-row-gap: 0.3em;
 }
 
-#contact_me_class {
-    display: grid;
+
+
+.contact_me_class {
+    border-radius: 0.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 #contact_me p {
@@ -214,26 +225,27 @@ to hide and display the about content */
     top: 0;
 }
 
+footer {
+    display: grid;
+    justify-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1em 0 1em 0;
+}
+
 @keyframes swipeRight {
     0% {
-        width: 0%;
-        top: 0;
-        left: -150;
+        width: 100%;
+        transform: translate3d(50px, 0px, 0px);
         opacity: 0.0;
         font-size: 0.5em;
     }
     50% {
-        width: 70%;
         background: rgba(0, 0, 0, 0.4);
-        opacity: 0.5;
-    }
-    75% {
-        width: 40%;
-        font-size: 0.7em;
+        transform: translate3d(-250px, 0px, 0px);
     }
     100% {
         width: 100%;
-        left: 0;
+        transform: translate3d(0px, 0px, 0px);
         opacity: 1;
         font-size: 2em;
     }
@@ -241,10 +253,19 @@ to hide and display the about content */
 
 @keyframes resize {
     0% {
-        transform: scale(1);
+        transform: scale(1) translate3d(0px, 0px, 0px);
     }
     15% {
-        transform: scale(1.2);
+        transform: scale(1.2) translate3d(0px, -5px, 0px);
+    }
+}
+
+@keyframes bounceIcons {
+    69% {
+        transform: scale(1) translate3d(0px, 0px, 0px);
+    }
+    85% {
+        transform: scale(1.2) translate3d(0px, -3px, 0px);
     }
 }
 
