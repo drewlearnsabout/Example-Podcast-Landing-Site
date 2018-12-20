@@ -10,6 +10,19 @@ header {
     background-size: cover;
 }
 
+header p {
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0.5em 0 0.5em 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+header p span {
+    color: rgb(252, 206, 0);
+}
+
 #headerBlock {
     padding-top: 11em;
     display: grid;
@@ -32,8 +45,8 @@ header {
 }
 
 #socialIcons {
-    animation-name: delay, bounceIcons;
-    animation-duration: 1.8s;
+    animation-name: delay;
+    animation-duration: 2.5s;
 }
 
 .socialIconSize {
@@ -47,21 +60,18 @@ header {
 
 nav {
     display: grid;
-    position: relative;
     justify-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(17em, 1fr));
     padding: 1em;
-    background: rgb(167, 167, 167);
+    background: rgba(0, 0, 0, 0.4);
     border-top: 1px solid white;
     border-bottom: 1px solid white;
-    z-index: 1;
 }
 
 .navbar {
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     color: white;
-    cursor: pointer;
 }
 
 .navbar:hover {
@@ -75,10 +85,6 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-}
-
-.sticky + header {
-    padding-top: 60px;
 }
 
 #aboutSection {
@@ -130,15 +136,11 @@ nav {
 
 #contact_me {
     display: grid;
-    grid-row-gap: 0.3em;
+    grid-row-gap: 0.2em;
 }
 
-
-
-.contact_me_class {
-    border-radius: 0.5em;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+#contact_me_class {
+    display: grid;
 }
 
 #contact_me p {
@@ -225,47 +227,32 @@ to hide and display the about content */
     top: 0;
 }
 
-footer {
-    display: grid;
-    justify-items: center;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 1em 0 1em 0;
-}
-
 @keyframes swipeRight {
     0% {
         width: 100%;
-        transform: translate3d(50px, 0px, 0px);
         opacity: 0.0;
         font-size: 0.5em;
+        transform: translate3d(250, 250, 0);
     }
     50% {
+        width: 100%;
         background: rgba(0, 0, 0, 0.4);
-        transform: translate3d(-250px, 0px, 0px);
+        opacity: 0.5;
     }
     100% {
         width: 100%;
-        transform: translate3d(0px, 0px, 0px);
         opacity: 1;
         font-size: 2em;
+        transform: translate3d(0, 0, 0);
     }
 }
 
 @keyframes resize {
     0% {
-        transform: scale(1) translate3d(0px, 0px, 0px);
+        transform: scale(1);
     }
     15% {
-        transform: scale(1.2) translate3d(0px, -5px, 0px);
-    }
-}
-
-@keyframes bounceIcons {
-    69% {
-        transform: scale(1) translate3d(0px, 0px, 0px);
-    }
-    85% {
-        transform: scale(1.2) translate3d(0px, -3px, 0px);
+        transform: scale(1.2);
     }
 }
 
