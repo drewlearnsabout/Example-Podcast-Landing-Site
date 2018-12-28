@@ -17,10 +17,13 @@ header p {
     padding: 0.5em 0 0.5em 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    animation-name: topFade;
+    animation-duration: 4s;
 }
 
 header p span {
     color: rgb(252, 206, 0);
+    cursor: pointer;
 }
 
 #headerBlock {
@@ -36,7 +39,6 @@ header p span {
     justify-content: center;
     padding: 1em 0 1em 0;
     color: white;
-    font-size: 3em;
     z-index: 0;
     background: rgba(0, 0, 0, 0.4);
     animation-name: swipeRight;
@@ -44,24 +46,51 @@ header p span {
     animation-fill-mode: forwards;
 }
 
-#socialIcons {
-    animation-name: delay;
-    animation-duration: 2.5s;
+#facebookIcon {
+    animation-name: delay1;
+    animation-duration: 3s;
+}
+
+#instagramIcon {
+    animation-name: delay2;
+    animation-duration: 3s;
+}
+
+#twitterIcon {
+    animation-name: delay3;
+    animation-duration: 3s;
+}
+
+#itunesIcon {
+    animation-name: delay4;
+    animation-duration: 3s;
+}
+
+#soundcloudIcon {
+    animation-name: delay5;
+    animation-duration: 3s;
+}
+
+#spotifyIcon {
+    animation-name: delay6;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 .socialIconSize {
     height: 2em;
     width: 2em;
 }
+
 .socialIconSize:hover {
-    animation-name: resize;
-    animation-duration: 1s;
+    background: rgb(248, 199, 109);
+    border-radius: 1em;
 }
 
 nav {
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(17em, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
     padding: 1em;
     background: rgba(0, 0, 0, 0.4);
     border-top: 1px solid white;
@@ -167,7 +196,7 @@ h3 {
     display: grid;
     grid-gap: 2em 1em;
     justify-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(23em, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
 }
 
 #podcastTiles {
@@ -216,6 +245,28 @@ h3 {
     cursor: pointer;
 }
 
+footer {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    margin: 0 auto;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    background: black;
+}
+
+footer a {
+    display: grid;
+    align-self: center;
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: rgb(248, 199, 109);
+}
+
 /* Continue creating the modal class 
 to hide and display the about content */
 .modal {
@@ -247,14 +298,6 @@ to hide and display the about content */
     }
 }
 
-@keyframes resize {
-    0% {
-        transform: scale(1);
-    }
-    15% {
-        transform: scale(1.2);
-    }
-}
 
 @keyframes fadeIn {
     0% {
@@ -265,13 +308,103 @@ to hide and display the about content */
     }
 }
 
-@keyframes delay {
+@keyframes delay1 {
+    0% {
+        opacity: 0.0;
+    }
+    64% {
+        opacity: 0.0;
+        transform: translate(0, -15px)
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes delay2 {
+    0% {
+        opacity: 0.0;
+    }
+    67% {
+        opacity: 0.0;
+        transform: translate(0, -15px)
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes delay3 {
     0% {
         opacity: 0.0;
     }
     70% {
         opacity: 0.0;
+        transform: translate(0, -15px)
     }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes delay4 {
+    0% {
+        opacity: 0.0;
+    }
+    73% {
+        opacity: 0.0;
+        transform: translate(0, -15px)
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes delay5 {
+    0% {
+        opacity: 0.0;
+    }
+    76% {
+        opacity: 0.0;
+        transform: translate(0, -15px)
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes delay6 {
+    0% {
+        opacity: 0.0;
+    }
+    79% {
+        opacity: 0.0;
+        transform: translate(0, -15px)
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes resize {
+    0% {
+        transform: scale(1);
+    }
+    15% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes topFade {
+    0% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 0;
+    }
+
     100% {
         opacity: 1;
     }

@@ -12,12 +12,12 @@
             <section id="headerBlock">
                 <h1>One Interesting Podcast</h1>
                 <section id="socialIcons">
-                    <a href="#"><img class="socialIconSize" src="https://github.com/drewlearnsabout/Example-Podcast-Landing-Site/blob/master/001-facebook.png?raw=true"></a>
-                    <a href="#"><img class="socialIconSize" src="https://github.com/drewlearnsabout/Example-Podcast-Landing-Site/blob/master/002-instagram.png?raw=true"></a>
-                    <a href="#"><img class="socialIconSize" src="https://github.com/drewlearnsabout/Example-Podcast-Landing-Site/blob/master/003-twitter.png?raw=true"></a>
-                    <a href="#"><img class="socialIconSize" src="https://github.com/drewlearnsabout/Example-Podcast-Landing-Site/blob/master/itunes-logo-of-amusical-note-inside-a-circle.png?raw=true"></a>
-                    <a href="#"><img class="socialIconSize" src="https://github.com/drewlearnsabout/Example-Podcast-Landing-Site/blob/master/soundcloud-logo.png?raw=true"></a>
-                    <a href="#"><img class="socialIconSize" src="https://github.com/drewlearnsabout/Example-Podcast-Landing-Site/blob/master/spotify-logo-button.png?raw=true"></a>
+                    <a href="#"><img id="facebookIcon" class="socialIconSize" src="https://github.com/drewlearnsabout/Example-Podcast-Landing-Site/blob/master/001-facebook.png?raw=true"></a>
+                    <a href="#"><img id="instagramIcon" class="socialIconSize" src="https://github.com/drewlearnsabout/Example-Podcast-Landing-Site/blob/master/002-instagram.png?raw=true"></a>
+                    <a href="#"><img id="twitterIcon" class="socialIconSize" src="https://github.com/drewlearnsabout/Example-Podcast-Landing-Site/blob/master/003-twitter.png?raw=true"></a>
+                    <a href="#"><img id="itunesIcon" class="socialIconSize" src="https://github.com/drewlearnsabout/Example-Podcast-Landing-Site/blob/master/itunes-logo-of-amusical-note-inside-a-circle.png?raw=true"></a>
+                    <a href="#"><img id="soundcloudIcon" class="socialIconSize" src="https://github.com/drewlearnsabout/Example-Podcast-Landing-Site/blob/master/soundcloud-logo.png?raw=true"></a>
+                    <a href="#"><img id="spotifyIcon" class="socialIconSize" src="https://github.com/drewlearnsabout/Example-Podcast-Landing-Site/blob/master/spotify-logo-button.png?raw=true"></a>
                 </section>
             </section>
         </header>
@@ -34,8 +34,7 @@
                 <span class="close">&times;</span>
             </section>
         </div>
-
-            <!-- Create a section for the contact modal!  -->
+        
         <div id="myModal2" class="modal">
             <section id="contactSection">
                 <form id="contact_me" name="contact" method="post" netlify>    
@@ -89,8 +88,19 @@
                     <source src="#" type="audio/mpeg">
                 </audio>
             </div>
+            <div id="sixthPodcast">
+                <button class="collapsible"><p>Sixth Title</p></button>
+                <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor iaculis dolor.</div>
+                <audio controls>
+                    <source src="#" type="audio/mpeg">
+                </audio>
+            </div>
         </section>
-        <footer></footer>
+        <footer>
+            <p>&copy; 2018 One Interesting Podcast</p>
+            <a href="#">Terms</a>
+            <a href="#">Policy</a>
+        </footer>
         </main>
     </body>
 
