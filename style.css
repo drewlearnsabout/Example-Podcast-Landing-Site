@@ -13,7 +13,7 @@ header {
 header p {
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 1);
     padding: 0.5em 0 0.5em 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -35,15 +35,12 @@ header p span {
 
 #headerBlock h1 {
     font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
     display: grid;
     justify-content: center;
     padding: 1em 0 1em 0;
-    color: white;
+    color: rgb(252, 206, 0);
     z-index: 0;
-    background: rgba(0, 0, 0, 0.4);
-    animation-name: swipeRight;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
 }
 
 #facebookIcon {
@@ -87,18 +84,19 @@ header p span {
     border-radius: 1em;
 }
 
-nav {
+#stickyNavbar {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
     padding: 1em;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 1);
     border-top: 1px solid white;
     border-bottom: 1px solid white;
 }
 
 .navbar {
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     text-decoration: none;
     color: white;
 }
@@ -192,23 +190,17 @@ h3 {
 }
 
 #podcasts {
-    margin: 1em;
+    margin-bottom: 3em;
     display: grid;
     grid-gap: 2em 1em;
     justify-items: center;
     grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
 }
 
-#podcastTiles {
-    display: grid;
-    max-width: 20em;
-    justify-items: center;
-}
-
 .collapsible {
     font-family: 'Montserrat', sans-serif;
+    padding: 0 7em 0 7em;
     font-size: 1em;
-    width: 22.5em;
     cursor: pointer;
     outline: none;
     color: white;
@@ -233,7 +225,7 @@ h3 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     max-height: 0;
-    max-width: 22em;
+    max-width: 19em;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
@@ -277,27 +269,6 @@ to hide and display the about content */
     left: 0;
     top: 0;
 }
-
-@keyframes swipeRight {
-    0% {
-        width: 100%;
-        opacity: 0.0;
-        font-size: 0.5em;
-        transform: translate3d(250, 250, 0);
-    }
-    50% {
-        width: 100%;
-        background: rgba(0, 0, 0, 0.4);
-        opacity: 0.5;
-    }
-    100% {
-        width: 100%;
-        opacity: 1;
-        font-size: 2em;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
 
 @keyframes fadeIn {
     0% {
@@ -410,24 +381,37 @@ to hide and display the about content */
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
     #headerBlock h1 {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
-    nav {
-        justify-items: left;
-        padding: 2em;
-    }
-
-    #podcastTiles {
-        max-width: 16em;
+    h3 {
+        font-size: 1em;
     }
 
     .collapsible {
-        max-width: 18em;
+        padding: 0 5em 0 5em;
     }
     .content {
-        max-width: 18em;
+        max-width: 14em;
+    }
+
+    .podcastTiles {
+        display: grid;
+        justify-items: center;
+    }
+
+    .podcastTiles audio {
+        width: 14em;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    footer a {
+        padding: 0.5em 0 0.5em 0;
     }
 }

@@ -60,35 +60,35 @@
                     <source src="#" type="audio/mpeg">
                 </audio>
             </div>
-            <div id="secondPodcast">
+            <div id="secondPodcast" class="podcastTiles">
                 <button class="collapsible"><p>Second Title</p></button>
                 <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor iaculis dolor.</div>
                 <audio controls>
                     <source src="#" type="audio/mpeg">
                 </audio>
             </div>
-            <div id="thirdPodcast">
+            <div id="thirdPodcast" class="podcastTiles">
                 <button class="collapsible"><p>Third Title</p></button>
                 <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor iaculis dolor.</div>
                 <audio controls>
                     <source src="#" type="audio/mpeg">
                 </audio>
             </div>
-            <div id="fourthPodcast">
+            <div id="fourthPodcast" class="podcastTiles">
                 <button class="collapsible"><p>Fourth Title</p></button>
                 <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor iaculis dolor.</div>
                 <audio controls>
                     <source src="#" type="audio/mpeg">
                 </audio>
             </div>
-            <div id="fifthPodcast">
+            <div id="fifthPodcast" class="podcastTiles">
                 <button class="collapsible"><p>Fifth Title</p></button>
                 <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor iaculis dolor.</div>
                 <audio controls>
                     <source src="#" type="audio/mpeg">
                 </audio>
             </div>
-            <div id="sixthPodcast">
+            <div id="sixthPodcast" class="podcastTiles">
                 <button class="collapsible"><p>Sixth Title</p></button>
                 <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor iaculis dolor.</div>
                 <audio controls>
@@ -142,7 +142,9 @@
         }
 
         //JS for sticky navbar
-        window.scroll = function() {myFunction()};
+    /*
+        window.onscroll = function() {myFunction()};
+
         var navbar = document.getElementById("stickyNavbar");
         var sticky = navbar.offsetTop;
 
@@ -150,9 +152,11 @@
             if (window.pageYOffset >= sticky) {
                 navbar.classList.add("sticky");
             } else {
-                navbar.classList.remove("sticky");
+                navbar.classList.remove(sticky);
             }
         }
+
+    */
 
         //JS for collapsible details for each Podcast entry
         var coll = document.getElementsByClassName("collapsible");
