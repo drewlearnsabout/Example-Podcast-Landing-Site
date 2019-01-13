@@ -41,6 +41,8 @@ header p span {
     padding: 1em 0 1em 0;
     color: rgb(252, 206, 0);
     z-index: 0;
+    animation-name: headerFade;
+    animation-duration: 3s;
 }
 
 #facebookIcon {
@@ -268,6 +270,18 @@ to hide and display the about content */
     padding: 7.5em 0 0 0;
     left: 0;
     top: 0;
+}
+
+@keyframes headerFade {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeIn {
