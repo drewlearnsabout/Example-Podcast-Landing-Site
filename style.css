@@ -8,6 +8,8 @@ header {
     height: 600px;
     background: url("audio-microphone-radio-484.jpg");
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 header p {
@@ -107,7 +109,7 @@ header p span {
     animation-name: resize;
     font-weight: bold;
     animation-duration: 1s;
-    color: rgb(255, 81, 0);
+    color: rgb(248, 199, 109);
 }
 
 .sticky {
@@ -212,7 +214,7 @@ h3 {
 
 .collapsible:hover {
     font-weight: bold;
-    color: rgb(255, 81, 0);
+    color: rgb(248, 199, 109);
 }
 
 .collapsible:after {
